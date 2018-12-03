@@ -154,10 +154,17 @@ mark {
   background: #ff0;
 }
 .main-card {
-  width: 299px;
-  height: 383px;
-  background-color: #ead4cf;
+  width: 255px;
+  height: 325px;
   cursor: pointer;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+body,
+html {
+  height: 100%;
+  min-height: 820px;
+  font-size: 14px;
 }
 .top-wrap {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/02/93b00e05-5dd4-423f-8f0a-560a788abc05.png);
@@ -167,7 +174,7 @@ mark {
   /* height: calc(100vh - 200px); */
   min-width: 1190px;
   width: 100%;
-  height: 740px;
+  height: 80%;
 }
 .top-wrap .nav-glass {
   width: 100%;
@@ -205,9 +212,7 @@ mark {
   justify-content: space-between;
 }
 .bottom-wrap {
-  position: fixed;
-  bottom: 0;
-  height: 200px;
+  height: 20%;
   width: 100%;
   background-color: #000;
 }
@@ -242,10 +247,10 @@ mark {
   display: none;
 }
 .card-details {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .card-details > div {
-  display: inline-block;
+  float: left;
 }
 .card-details .left-details,
 .card-details .right-details {
@@ -258,24 +263,31 @@ mark {
   width: 300px;
 }
 .card-details .left-details > div {
-  border: 1px solid black;
   margin: 20px auto;
 }
 .card-details .left-details .left-icon {
   width: 204px;
   height: 206px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .card-details .left-details .left-QR-code {
   width: 126px;
   height: 126px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .card-details .left-details .left-note {
   width: 255px;
   height: 80px;
+  text-align: center;
 }
 .card-details .right-details {
   background-color: #4a90e2;
   width: 880px;
+  margin-left: 5px;
 }
 .card-details .right-details .content-wrap {
   position: absolute;
@@ -307,6 +319,18 @@ mark {
   color: #333333;
   text-align: left;
 }
+.card-1-1 {
+  background-image: url(../img/card-1.png);
+}
+.card-1-2 {
+  background-image: url(../img/card-2.png);
+}
+.card-1-3 {
+  background-image: url(../img/card-3.png);
+}
+.QR-code-1-1 {
+  background-image: url(../img/qrcode.png);
+}
 .animation-card {
   -webkit-transition: box-shadow 0.7s, opacity 0.7s;
   transition: box-shadow 0.7s, opacity 0.7s;
@@ -316,7 +340,6 @@ mark {
 .animation-card:hover {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
-  box-shadow: 0 0 15px #fff;
   opacity: 1;
 }
 .animation-fadeInDown {
