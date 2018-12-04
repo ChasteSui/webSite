@@ -153,10 +153,48 @@ video {
 mark {
   background: #ff0;
 }
+/*webkit内核*/
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+/*o内核*/
+.scroll_content .-o-scrollbar {
+  -moz-appearance: none !important;
+  background: rgba(0, 255, 0, 0) !important;
+}
+.scroll_content::-o-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+.scroll_content::-o-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+.scroll_content::-o-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+}
+.scroll_content::-o-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+.scroll_content::-o-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
+.scroll_content::-o-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0);
+}
+/*IE10,IE11,IE12*/
 .default-bgp {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.bg-blue {
+  background-color: #4a90e2;
+}
+.bg-green {
+  background-color: #50e3c2;
+}
+.bg-orange {
+  background-color: #f5a623;
 }
 .main-card {
   width: 255px;
@@ -184,7 +222,6 @@ html {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/13d825b6-794c-4fda-ba27-784f6b388bbf.png);
   background-repeat: no-repeat;
   background-position: inherit;
-  background-size: auto 100%;
   /* height: calc(100vh - 200px); */
   min-width: 1200px;
   width: 100%;
@@ -205,7 +242,7 @@ html {
 }
 .top-wrap .main-wrap {
   width: 1200px;
-  height: 889px;
+  height: 745px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -236,25 +273,67 @@ html {
 .bottom-wrap .footer-wrap {
   width: 1200px;
   margin: 0 auto;
-}
-.bottom-wrap .footer-wrap p,
-.bottom-wrap .footer-wrap a {
+  height: 289px;
   color: #fff;
 }
+.bottom-wrap .footer-wrap a {
+  color: #ffffff;
+}
 .bottom-wrap .footer-wrap > div {
+  height: 240px;
+  margin-top: 30px;
+  vertical-align: text-bottom;
   display: inline-block;
 }
 .bottom-wrap .footer-wrap .footer-left {
   text-align: left;
   width: 200px;
 }
+.bottom-wrap .footer-wrap .footer-left .large-font {
+  font-size: 24px;
+}
+.bottom-wrap .footer-wrap .footer-left .normal-font {
+  margin-top: 23px;
+  font-size: 18px;
+}
 .bottom-wrap .footer-wrap .footer-center {
-  text-align: center;
   width: 785px;
+  text-align: center;
+}
+.bottom-wrap .footer-wrap .footer-center > div {
+  margin: 44px 37px 0;
+  display: inline-block;
+}
+.bottom-wrap .footer-wrap .footer-center p {
+  margin-bottom: 16px;
+}
+.bottom-wrap .footer-wrap .footer-center img {
+  color: #000000;
+  width: 138px;
+  height: 138px;
 }
 .bottom-wrap .footer-wrap .footer-right {
   text-align: right;
   width: 200px;
+}
+.bottom-wrap .footer-wrap .footer-right > div {
+  margin: 0 0 18px 0;
+}
+.bottom-wrap .footer-wrap .footer-right p {
+  font-size: 18px;
+}
+.bottom-wrap .footer-wrap .footer-right .small-font {
+  color: rgba(255, 255, 255, 0.415);
+  font-size: 12px;
+}
+.bottom-wrap .center-font {
+  border-top: 1px solid #fff;
+  margin: 0 20px;
+  height: 56px;
+  line-height: 56px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
 }
 .flex-one {
   flex: 1;
@@ -332,7 +411,6 @@ html {
   margin-top: 25px;
 }
 .card-details .right-details {
-  background-color: #4a90e2;
   width: 900px;
 }
 .card-details .right-details .content-wrap {
@@ -348,6 +426,15 @@ html {
 }
 .card-details .right-details .teamwork {
   text-align: center;
+}
+.card-details .right-details .teamwork > p {
+  text-align: center;
+  margin: 32px 0 35px;
+  height: 42px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 42px;
 }
 .card-details .right-details .teamwork .bank-icon-wrap {
   width: 570px;
