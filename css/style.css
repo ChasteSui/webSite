@@ -153,6 +153,11 @@ video {
 mark {
   background: #ff0;
 }
+.default-bgp {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .main-card {
   width: 255px;
   height: 325px;
@@ -162,30 +167,36 @@ mark {
 }
 body,
 html {
+  font-family: sans-serif, PingFangSC-Regular;
   height: 100%;
   min-height: 820px;
   font-size: 14px;
 }
+.hidden-scroll-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -20px;
+  bottom: 0;
+  overflow-y: scroll;
+}
 .top-wrap {
-  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/02/93b00e05-5dd4-423f-8f0a-560a788abc05.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/13d825b6-794c-4fda-ba27-784f6b388bbf.png);
   background-repeat: no-repeat;
   background-position: inherit;
-  background-size: cover;
+  background-size: auto 100%;
   /* height: calc(100vh - 200px); */
-  min-width: 1190px;
+  min-width: 1200px;
   width: 100%;
-  height: 80%;
 }
 .top-wrap .nav-glass {
   width: 100%;
-  border-bottom: 1px solid #ead4cf;
-  border-bottom-color: hsla(0, 0%, 100%, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: rgba(110, 15, 133, 0.178);
 }
 .top-wrap .nav-wrap {
   width: 1200px;
   margin: 0 auto;
-  height: 122px;
+  height: 200px;
   display: flex;
 }
 .top-wrap .nav-wrap .line-center {
@@ -194,27 +205,56 @@ html {
 }
 .top-wrap .main-wrap {
   width: 1200px;
-  height: 600px;
+  height: 889px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }
+.top-wrap .main-wrap .title {
+  margin-top: 142px;
+}
 .top-wrap .main-wrap .title p {
-  font-family: ;
-  font-size: 50px;
-  margin: 60px 0;
-  color: #ffffff;
-  text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
+  height: 84px;
+  font-size: 60px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 84px;
+  text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .top-wrap .main-wrap .card-wrap {
+  margin-top: 68px;
   display: flex;
   justify-content: space-between;
 }
 .bottom-wrap {
-  height: 20%;
+  height: 346px;
   width: 100%;
+  margin-top: -7px;
   background-color: #000;
+}
+.bottom-wrap .footer-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bottom-wrap .footer-wrap p,
+.bottom-wrap .footer-wrap a {
+  color: #fff;
+}
+.bottom-wrap .footer-wrap > div {
+  display: inline-block;
+}
+.bottom-wrap .footer-wrap .footer-left {
+  text-align: left;
+  width: 200px;
+}
+.bottom-wrap .footer-wrap .footer-center {
+  text-align: center;
+  width: 785px;
+}
+.bottom-wrap .footer-wrap .footer-right {
+  text-align: right;
+  width: 200px;
 }
 .flex-one {
   flex: 1;
@@ -255,7 +295,7 @@ html {
 .card-details .left-details,
 .card-details .right-details {
   position: relative;
-  height: 500px;
+  height: 678px;
 }
 .card-details .left-details {
   z-index: 9;
@@ -263,18 +303,19 @@ html {
   width: 300px;
 }
 .card-details .left-details > div {
-  margin: 20px auto;
+  margin: 0 auto;
 }
 .card-details .left-details .left-icon {
-  width: 204px;
-  height: 206px;
+  width: 254px;
+  height: 326px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .card-details .left-details .left-QR-code {
-  width: 126px;
-  height: 126px;
+  margin-top: 40px;
+  width: 142px;
+  height: 139px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -284,52 +325,130 @@ html {
   height: 80px;
   text-align: center;
 }
+.card-details .left-details .left-note p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 25px;
+}
 .card-details .right-details {
   background-color: #4a90e2;
-  width: 880px;
-  margin-left: 5px;
+  width: 900px;
 }
 .card-details .right-details .content-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 820px;
-  height: 440px;
+  font-family: ;
+  width: 860px;
+  height: 598px;
   background-color: #ffffff;
+  overflow: hidden;
+}
+.card-details .right-details .teamwork {
+  text-align: center;
+}
+.card-details .right-details .teamwork .bank-icon-wrap {
+  width: 570px;
+  height: 350px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-details .right-details .teamwork .bank-icon-wrap div {
+  margin: 0 12px;
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card-details .right-details .flex-note-parent {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
-.card-details .right-details .content-wrap .note-item {
-  width: 300px;
-  margin: 15px 0;
+.card-details .right-details .flex-note-parent .note-item {
+  width: 500px;
+  margin: 15px 0 15px 120px;
 }
-.card-details .right-details .content-wrap .note-item span:nth-child(1) {
+.card-details .right-details .flex-note-parent .note-item span:nth-child(1) {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: #4a90e2;
-  border-radius: 10px;
+  border-radius: 15px;
 }
-.card-details .right-details .content-wrap .note-item span:nth-child(2) {
-  margin-left: 20px;
+.card-details .right-details .flex-note-parent .note-item span:nth-child(2) {
+  margin-left: 45px;
   font-size: 30px;
   color: #333333;
+  line-height: 42px;
   text-align: left;
+  font-weight: 400;
+  vertical-align: text-bottom;
+}
+.card-details .right-details .dc-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-details .right-details .dc-wrap .dc-item {
+  margin: 20px 12px 10px 12px;
+}
+.card-details .right-details .dc-wrap .dc-item p {
+  color: #333333;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+.card-details .right-details .dc-wrap .dc-item div {
+  width: 187px;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-1-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/91297c75-fdb3-4b11-9145-ee179c20e466.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-1-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/6908dad7-d465-4106-b1e3-7f68c34b2cc3.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-1-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/ee054147-2ff6-41c1-9b93-4bef279abcff.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-1-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/4dcf0181-b4f6-4bb9-9bb5-5a99a343402e.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-2-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/dec326fa-a2f3-49b0-b830-fe03d53a8c95.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-2-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/828618ce-05e9-478b-bfc2-fdc025481370.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-2-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/908e67af-ce85-40bd-b0b1-f4d1e9568bbb.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-2-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/5c8647f3-f0c2-4309-be5e-904b7772b08e.png);
 }
 .card-1-1 {
-  background-image: url(../img/card-1.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f909d08a-0555-44ef-9af3-86784266c1eb.png);
 }
 .card-1-2 {
-  background-image: url(../img/card-2.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/a995281a-c0af-472f-8db1-39176114cced.png);
 }
 .card-1-3 {
-  background-image: url(../img/card-3.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/01dc33eb-d55a-4c96-b80a-a302dd7cdec7.png);
 }
 .QR-code-1-1 {
-  background-image: url(../img/qrcode.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f1faf1aa-d7cb-47db-8a51-5feb6c444d74.png);
 }
 .animation-card {
   -webkit-transition: box-shadow 0.7s, opacity 0.7s;

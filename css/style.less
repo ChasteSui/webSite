@@ -127,43 +127,57 @@ mark {
 
 //清除结束
 
+.default-bgp {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .main-card {
     width: 255px;
     height: 325px;
     // background-color: #ead4cf;
     cursor: pointer;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     // margin: 0 82.5px;
 }
 
-body , html {
+body,
+html {
+    font-family: sans-serif, PingFangSC-Regular;
     height: 100%;
     min-height: 820px;
     font-size: 14px;
 }
 
+.hidden-scroll-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -20px;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
 .top-wrap {
-    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/02/93b00e05-5dd4-423f-8f0a-560a788abc05.png);
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/13d825b6-794c-4fda-ba27-784f6b388bbf.png);
+    // background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/bef3a628-65fe-42e6-b575-ba43125e9f27.png);
     background-repeat: no-repeat;
     background-position: inherit;
-    background-size: cover;
+    background-size: auto 100%;
     /* height: calc(100vh - 200px); */
-    min-width: 1190px;
+    min-width: 1200px;
     width: 100%;
-    height: 80%;
-
     .nav-glass {
         width: 100%;
-        border-bottom: 1px solid #ead4cf;
-        border-bottom-color: hsla(0, 0%, 100%, 0.2);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        background: rgba(110, 15, 133, 0.178);
     }
 
     .nav-wrap {
         width: 1200px;
         margin: 0 auto;
-        height: 122px;
+        height: 200px;
         display: flex;
         .line-center {
             display: flex;
@@ -173,33 +187,59 @@ body , html {
 
     .main-wrap {
         width: 1200px;
-        height: 600px;
+        height: 889px;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
 
         .title {
+            margin-top: 142px;
             p {
-                font-family: ;
-                font-size: 50px;
-                margin: 60px 0;
-                color: #ffffff;
-                text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.5);
                 text-align: center;
+                height: 84px;
+                font-size: 60px;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 1);
+                line-height: 84px;
+                text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.5);
             }
         }
 
         .card-wrap {
+            margin-top: 68px;
             display: flex;
             justify-content: space-between;
         }
     }
 }
 .bottom-wrap {
-	
-    height: 20%;
+    height: 346px;
     width: 100%;
+    margin-top: -7px;
     background-color: #000;
+
+    .footer-wrap {
+        width: 1200px;
+        margin:0 auto;
+        p,a{
+            color: #fff;
+        }
+        &>div{
+            display: inline-block;
+        }
+        .footer-left {
+            text-align: left;
+            width: 200px;
+        }
+        .footer-center {
+            text-align: center;
+            width: 785px;
+        }
+        .footer-right {
+            text-align: right;
+            width: 200px;
+        }
+    }
 }
 
 .flex-one {
@@ -241,96 +281,184 @@ body , html {
 .card-details {
     margin-top: 50px;
     & > div {
-        // display: inline-block;
-		float: left;
+        float: left;
     }
     .left-details,
     .right-details {
         position: relative;
-        height: 500px;
+        height: 678px;
     }
     .left-details {
-		// top: -137px;
+        // top: -137px;
         z-index: 9;
         background-color: #ffffff;
         width: 300px;
         & > div {
             // border: 1px solid black;
-            margin: 20px auto;
+            margin: 0 auto;
         }
         .left-icon {
-            width: 204px;
-            height: 206px;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
+            width: 254px;
+            height: 326px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .left-QR-code {
-            width: 126px;
-            height: 126px;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
+            margin-top: 40px;
+            width: 142px;
+            height: 139px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .left-note {
             width: 255px;
             height: 80px;
-			text-align: center;
+            text-align: center;
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: #333333;
+                margin-top: 25px;
+            }
         }
     }
     .right-details {
         background-color: #4a90e2;
-        width: 880px;
-		margin-left: 5px;
+        width: 900px;
         .content-wrap {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 820px;
-            height: 440px;
+            font-family: ;
+            width: 860px;
+            height: 598px;
             background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .teamwork {
+            text-align: center;
+
+            .bank-icon-wrap {
+                width: 570px;
+                height: 350px;
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                flex-wrap: wrap;
+                div {
+                    margin: 0 12px;
+                    width: 70px;
+                    height: 70px;
+                    .default-bgp;
+                }
+            }
+
+            //             .merchant-icon-wrap{
+            //
+            //             }
+        }
+
+        .flex-note-parent {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: center;
             justify-content: center;
-
             .note-item {
-                width: 300px;
-                margin: 15px 0;
+                width: 500px;
+                margin: 15px 0 15px 120px;
                 span:nth-child(1) {
                     display: inline-block;
-                    width: 20px;
-                    height: 20px;
+                    width: 30px;
+                    height: 30px;
                     background-color: #4a90e2;
-                    border-radius: 10px;
+                    border-radius: 15px;
                 }
                 span:nth-child(2) {
-                    // font-family: PingFangSC-Regular;
-                    margin-left: 20px;
+                    margin-left: 45px;
                     font-size: 30px;
                     color: #333333;
+                    line-height: 42px;
                     text-align: left;
+                    font-weight: 400;
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+
+        .dc-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .dc-item {
+                margin: 20px 12px 10px 12px;
+
+                p {
+                    color: #333333;
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                div {
+                    width: 187px;
+                    height: 200px;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                .dc-card-1-1 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/91297c75-fdb3-4b11-9145-ee179c20e466.png);
+                }
+                .dc-card-1-2 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/6908dad7-d465-4106-b1e3-7f68c34b2cc3.png);
+                }
+                .dc-card-1-3 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/ee054147-2ff6-41c1-9b93-4bef279abcff.png);
+                }
+                .dc-card-1-4 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/4dcf0181-b4f6-4bb9-9bb5-5a99a343402e.png);
+                }
+
+                .dc-card-2-1 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/dec326fa-a2f3-49b0-b830-fe03d53a8c95.png);
+                }
+                .dc-card-2-2 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/828618ce-05e9-478b-bfc2-fdc025481370.png);
+                }
+                .dc-card-2-3 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/908e67af-ce85-40bd-b0b1-f4d1e9568bbb.png);
+                }
+                .dc-card-2-4 {
+                    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/5c8647f3-f0c2-4309-be5e-904b7772b08e.png);
                 }
             }
         }
     }
 }
 
-.card-1-1{
-	background-image: url(../img/card-1.png);
+.card-1-1 {
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f909d08a-0555-44ef-9af3-86784266c1eb.png);
 }
 
-.card-1-2{
-	background-image: url(../img/card-2.png);
+.card-1-2 {
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/a995281a-c0af-472f-8db1-39176114cced.png);
 }
 
-.card-1-3{
-	background-image: url(../img/card-3.png);
+.card-1-3 {
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/01dc33eb-d55a-4c96-b80a-a302dd7cdec7.png);
 }
 
-.QR-code-1-1{
-	background-image: url(../img/qrcode.png);
+.QR-code-1-1 {
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f1faf1aa-d7cb-47db-8a51-5feb6c444d74.png);
 }
 
 .animation-card {
