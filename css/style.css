@@ -190,6 +190,9 @@ mark {
 .bg-blue {
   background-color: #4a90e2;
 }
+.bg-blue-op785 {
+  background-color: rgba(74, 144, 226, 0.785);
+}
 .bg-green {
   background-color: #50e3c2;
 }
@@ -199,9 +202,79 @@ mark {
 .main-card {
   width: 255px;
   height: 325px;
+  border: 1px solid transparent;
   cursor: pointer;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+.square-card {
+  border: 1px solid transparent;
+  width: 285px;
+  height: 285px;
+  cursor: pointer;
+}
+.square-card .corner-icon,
+.square-card .corner-icon-1 {
+  margin: 20px 0 0 20px;
+  width: 102px;
+  height: 76px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.square-card p:nth-child(2) {
+  color: #fff;
+  margin: 85px 0 0 20px;
+  font-size: 36px;
+}
+.square-card p:nth-child(3) {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.square-card-bg-1 {
+  background-position: center,center;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(../img/Rectangle.png), url(../img/Rectangle1.png);
+}
+.square-card-bg-1 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/36823b7f-85b5-4e2b-8655-eb0564f2490e.png);
+}
+.square-card-bg-1 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/ea1aa986-39dc-4e3a-a131-f39399bf4663.png);
+}
+.square-card-bg-2 {
+  background-position: 40px,120px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/60d6e9d8-13ac-4c04-9418-76586b28ec27.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/9b52160c-bca3-4b02-b76d-fd0e56cbaf19.png);
+}
+.square-card-bg-2 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/52700dde-6fbd-4673-986b-32dbc29239ed.png);
+}
+.square-card-bg-2 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/72a23dee-ebd5-4719-8ffc-8108200cc298.png);
+}
+.square-card-bg-3 {
+  background-position: 45px 66px,84px 48px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/7c360810-302f-4a0d-91ad-9aefb02914fd.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/29a6edfb-d66b-46e0-ba96-b59834e03bf3.png);
+}
+.square-card-bg-3 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/3a1ded49-12a9-4a97-8325-71cfc737907a.png);
+}
+.square-card-bg-3 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f1d1a19f-a0e8-4f5f-a555-3843eb1c0f31.png);
+}
+.square-card-bg-4 {
+  background-position: 33px 69px,129px 72px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f0e47bce-7b6a-4ea0-bf88-e6c3ad4f9118.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/d90ebe8b-9df4-46a0-a0da-e205acac9cdd.png);
+}
+.square-card-bg-4 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/2aa6f49f-8a73-43db-97a9-6d1c4202a327.png);
+}
+.square-card-bg-4 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/84ad1ab6-5a4e-4fd2-8311-d7e0e0bd0efb.png);
 }
 body,
 html {
@@ -263,6 +336,10 @@ html {
   margin-top: 68px;
   display: flex;
   justify-content: space-between;
+}
+.top-wrap .main-wrap .card-wrap.card-row-2,
+.top-wrap .main-wrap .card-wrap.card-row-3 {
+  margin-top: 142px;
 }
 .bottom-wrap {
   height: 346px;
@@ -343,7 +420,7 @@ html {
   height: 64px;
 }
 .nav-parent {
-  justify-content: center;
+  justify-content: flex-end;
 }
 .nav-parent ul li {
   float: left;
@@ -438,16 +515,29 @@ html {
 }
 .card-details .right-details .teamwork .bank-icon-wrap {
   width: 570px;
-  height: 350px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   flex-wrap: wrap;
 }
 .card-details .right-details .teamwork .bank-icon-wrap div {
-  margin: 0 12px;
+  margin: 0 12px 28px;
   width: 70px;
   height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card-details .right-details .teamwork .merchant-icon-wrap {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-details .right-details .teamwork .merchant-icon-wrap div {
+  margin: 0 12px 19px;
+  width: 130px;
+  height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -524,6 +614,12 @@ html {
 }
 .card-details .right-details .dc-wrap .dc-item .dc-card-2-4 {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/5c8647f3-f0c2-4309-be5e-904b7772b08e.png);
+}
+.card-details .left-width-1 {
+  width: 287px;
+}
+.card-details .right-width-1 {
+  width: 913px;
 }
 .card-1-1 {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f909d08a-0555-44ef-9af3-86784266c1eb.png);

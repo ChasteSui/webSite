@@ -180,6 +180,9 @@ mark {
 .bg-blue {
     background-color: #4a90e2;
 }
+.bg-blue-op785 {
+    background-color: rgba(74,144,226,.785);
+}
 .bg-green {
     background-color: #50e3c2;
 }
@@ -187,14 +190,97 @@ mark {
     background-color: #f5a623;
 }
 
+// 盾型卡片
 .main-card {
     width: 255px;
     height: 325px;
+    border: 1px solid transparent; //解决子元素margin异常问题
     // background-color: #ead4cf;
     cursor: pointer;
     background-size: 100% auto;
     background-repeat: no-repeat;
     // margin: 0 82.5px;
+}
+
+//合作案例和关于我们导航卡片样式
+.square-card{
+    border: 1px solid transparent; //解决子元素margin异常问题
+    width: 285px;
+    height: 285px;
+    cursor: pointer;
+    .corner-icon,.corner-icon-1{
+        margin: 20px 0 0 20px;
+        width: 102px;
+        height: 76px;
+        .default-bgp
+    }
+    p:nth-child(2){
+        color: #fff;
+        margin: 85px 0 0 20px;
+        font-size: 36px;
+    }
+    p:nth-child(3){
+        color: #fff;
+        margin-left: 20px;
+    	font-size: 20px;
+    }
+//     .center-icon{
+//         
+//     }
+    
+}
+
+//方形卡片中间背景图
+.square-card-bg-1{
+    background-position: center,center;
+    background-repeat: no-repeat,no-repeat;
+    background-image: url(../img/Rectangle.png),url(../img/Rectangle1.png);
+    .corner-icon{
+        background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/36823b7f-85b5-4e2b-8655-eb0564f2490e.png);
+    }
+    .corner-icon-1{
+    	background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/ea1aa986-39dc-4e3a-a131-f39399bf4663.png);
+    }
+    
+}
+
+.square-card-bg-2{
+    background-position: 40px,120px;
+    background-repeat: no-repeat,no-repeat;
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/60d6e9d8-13ac-4c04-9418-76586b28ec27.png),
+                      url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/9b52160c-bca3-4b02-b76d-fd0e56cbaf19.png);
+    .corner-icon{
+        background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/52700dde-6fbd-4673-986b-32dbc29239ed.png);
+    }
+    .corner-icon-1{
+    	background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/72a23dee-ebd5-4719-8ffc-8108200cc298.png);
+    }
+}
+
+.square-card-bg-3{
+    background-position: 45px 66px,84px 48px;
+    background-repeat: no-repeat,no-repeat;
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/7c360810-302f-4a0d-91ad-9aefb02914fd.png),
+                      url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/29a6edfb-d66b-46e0-ba96-b59834e03bf3.png);
+    .corner-icon{
+        background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/3a1ded49-12a9-4a97-8325-71cfc737907a.png);
+    }
+    .corner-icon-1{
+    	background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f1d1a19f-a0e8-4f5f-a555-3843eb1c0f31.png);
+    }
+}
+
+.square-card-bg-4{
+    background-position: 33px 69px,129px 72px;
+    background-repeat: no-repeat,no-repeat;
+    background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f0e47bce-7b6a-4ea0-bf88-e6c3ad4f9118.png),
+                      url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/d90ebe8b-9df4-46a0-a0da-e205acac9cdd.png);
+    .corner-icon{
+        background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/2aa6f49f-8a73-43db-97a9-6d1c4202a327.png);
+    }
+    .corner-icon-1{
+    	background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/84ad1ab6-5a4e-4fd2-8311-d7e0e0bd0efb.png);
+    }
 }
 
 body,
@@ -264,6 +350,9 @@ html {
             display: flex;
             justify-content: space-between;
         }
+        .card-wrap.card-row-2,.card-wrap.card-row-3{
+            margin-top: 142px;
+        }
     }
 }
 .bottom-wrap {
@@ -299,19 +388,19 @@ html {
         }
         .footer-center {
             width: 785px;
-			text-align: center;
-			&>div{
-				margin: 44px 37px 0;
-				display: inline-block;
-			}
-			p{
-				margin-bottom: 16px;
-			}
-			img{
-				color: #000000;
-				width: 138px;
-				height: 138px;
-			}
+            text-align: center;
+            & > div {
+                margin: 44px 37px 0;
+                display: inline-block;
+            }
+            p {
+                margin-bottom: 16px;
+            }
+            img {
+                color: #000000;
+                width: 138px;
+                height: 138px;
+            }
         }
         .footer-right {
             text-align: right;
@@ -350,7 +439,7 @@ html {
 }
 
 .nav-parent {
-    justify-content: center;
+    justify-content: flex-end;
     ul {
         li {
             float: left;
@@ -375,6 +464,7 @@ html {
 .hide {
     display: none;
 }
+
 
 .card-details {
     margin-top: 50px;
@@ -439,8 +529,8 @@ html {
         .teamwork {
             text-align: center;
             & > p {
-				text-align: center;
-				margin: 32px 0 35px;
+                text-align: center;
+                margin: 32px 0 35px;
                 height: 42px;
                 font-size: 30px;
                 font-weight: 400;
@@ -449,22 +539,33 @@ html {
             }
             .bank-icon-wrap {
                 width: 570px;
-                height: 350px;
+                // height: 270px;
                 display: flex;
                 margin: 0 auto;
                 justify-content: center;
                 flex-wrap: wrap;
                 div {
-                    margin: 0 12px;
+                    margin: 0 12px 28px;
                     width: 70px;
                     height: 70px;
                     .default-bgp;
                 }
             }
 
-            //             .merchant-icon-wrap{
-            //
-            //             }
+            .merchant-icon-wrap {
+                // width: 570px;
+                // height: 270px;
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                flex-wrap: wrap;
+                div {
+                    margin: 0 12px 19px;
+                    width: 130px;
+                    height: 120px;
+                    .default-bgp;
+                }
+            }
         }
 
         .flex-note-parent {
@@ -548,6 +649,14 @@ html {
             }
         }
     }
+    
+    .left-width-1{
+        width: 287px;
+    }
+    .right-width-1{
+    	width: 913px;
+    }
+    
 }
 
 .card-1-1 {
