@@ -1,10 +1,15 @@
 "use strict"
-
+var drawMap = true;
 $('.main-card,.square-card').on('click', function () {
 	var targetDetails = $(this).attr("data-order");
 	$('.card-row').hide();
 	$(".card-details").hide();
 	$("." + targetDetails).show();
+	if (drawMap && targetDetails === "details-3-4") {
+    drawMap = false;
+    drawBdMap();
+	}
+
 })
 
 // 顶部导航点击事件
@@ -31,7 +36,26 @@ $(".nav-parent ul li").on("click", "a", function () {
 			break;
 	}
 })
+//绘制百度地图
+function drawBdMap() {
+	// 百度地图API功能
+	var sContent = "";
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(116.456118, 39.943387);
+	var marker = new BMap.Marker(point);
+	var infoWindow = new BMap.InfoWindow(sContent); // 创建信息窗口对象
+	map.centerAndZoom(point, 15);
+	map.addOverlay(marker); // 注册标记
+	map.enableScrollWheelZoom(true); // 允许滚轮缩放
 
+// 	marker.addEventListener("click", function () {
+// 		this.openInfoWindow(infoWindow);
+// 		//图片加载完毕重绘infowindow
+// 		document.getElementById('imgDemo').onload = function () {
+// 			infoWindow.redraw(); //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+// 		}
+// 	});
+}
 //render 函数
 //合作银行
 var bankIconData = [{
