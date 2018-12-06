@@ -156,7 +156,8 @@ mark {
 /*webkit内核*/
 ::-webkit-scrollbar {
   width: 0px;
-  height: 0px;
+  height: 3px;
+  background-color: #C0C0C0;
 }
 /*o内核*/
 .scroll_content .-o-scrollbar {
@@ -182,6 +183,9 @@ mark {
   background-color: rgba(0, 0, 0, 0);
 }
 /*IE10,IE11,IE12*/
+#allmap {
+  height: 100%;
+}
 .default-bgp {
   background-position: center;
   background-repeat: no-repeat;
@@ -190,8 +194,14 @@ mark {
 .bg-blue {
   background-color: #4a90e2;
 }
+.bg-blue-op785 {
+  background-color: rgba(74, 144, 226, 0.785);
+}
 .bg-green {
   background-color: #50e3c2;
+}
+.bg-green-op785 {
+  background-color: rgba(80, 227, 194, 0.785);
 }
 .bg-orange {
   background-color: #f5a623;
@@ -199,9 +209,79 @@ mark {
 .main-card {
   width: 255px;
   height: 325px;
+  border: 1px solid transparent;
   cursor: pointer;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+.square-card {
+  border: 1px solid transparent;
+  width: 285px;
+  height: 285px;
+  cursor: pointer;
+}
+.square-card .corner-icon,
+.square-card .corner-icon-1 {
+  margin: 20px 0 0 20px;
+  width: 102px;
+  height: 76px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.square-card p:nth-child(2) {
+  color: #fff;
+  margin: 85px 0 0 20px;
+  font-size: 36px;
+}
+.square-card p:nth-child(3) {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.square-card-bg-1 {
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(../img/Rectangle.png), url(../img/Rectangle1.png);
+}
+.square-card-bg-1 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/36823b7f-85b5-4e2b-8655-eb0564f2490e.png);
+}
+.square-card-bg-1 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/ea1aa986-39dc-4e3a-a131-f39399bf4663.png);
+}
+.square-card-bg-2 {
+  background-position: 40px, 120px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/60d6e9d8-13ac-4c04-9418-76586b28ec27.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/9b52160c-bca3-4b02-b76d-fd0e56cbaf19.png);
+}
+.square-card-bg-2 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/52700dde-6fbd-4673-986b-32dbc29239ed.png);
+}
+.square-card-bg-2 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/72a23dee-ebd5-4719-8ffc-8108200cc298.png);
+}
+.square-card-bg-3 {
+  background-position: 45px 66px, 84px 48px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/7c360810-302f-4a0d-91ad-9aefb02914fd.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/29a6edfb-d66b-46e0-ba96-b59834e03bf3.png);
+}
+.square-card-bg-3 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/3a1ded49-12a9-4a97-8325-71cfc737907a.png);
+}
+.square-card-bg-3 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f1d1a19f-a0e8-4f5f-a555-3843eb1c0f31.png);
+}
+.square-card-bg-4 {
+  background-position: 33px 69px, 129px 72px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f0e47bce-7b6a-4ea0-bf88-e6c3ad4f9118.png), url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/d90ebe8b-9df4-46a0-a0da-e205acac9cdd.png);
+}
+.square-card-bg-4 .corner-icon {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/2aa6f49f-8a73-43db-97a9-6d1c4202a327.png);
+}
+.square-card-bg-4 .corner-icon-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/84ad1ab6-5a4e-4fd2-8311-d7e0e0bd0efb.png);
 }
 body,
 html {
@@ -242,7 +322,8 @@ html {
 }
 .top-wrap .main-wrap {
   width: 1200px;
-  height: 745px;
+  height: 885px;
+  border: 1px solid transparent;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -264,9 +345,38 @@ html {
   display: flex;
   justify-content: space-between;
 }
+.top-wrap .main-wrap .card-wrap div:first-child {
+  -webkit-animation-delay: -0.3s, 0.2s;
+  animation-delay: -0.3s, 0.2s;
+  -webkit-animation-duration: 0.5s, 5s;
+  animation-duration: 0.5s, 5s;
+}
+.top-wrap .main-wrap .card-wrap div:nth-child(2) {
+  -webkit-animation-delay: -0.2s, 0.3s;
+  animation-delay: -0.2s, 0.3s;
+  -webkit-animation-duration: 0.5s, 4s;
+  animation-duration: 0.5s, 4s;
+}
+.top-wrap .main-wrap .card-wrap div:nth-child(3) {
+  -webkit-animation-delay: -0.1s, 0.4s;
+  animation-delay: -0.1s, 0.4s;
+  -webkit-animation-duration: 0.5s, 4.5s;
+  animation-duration: 0.5s, 4.5s;
+}
+.top-wrap .main-wrap .card-wrap div:nth-child(4) {
+  -webkit-animation-delay: 0s, 0.5s;
+  animation-delay: 0s, 0.5s;
+  -webkit-animation-duration: 0.5s, 5.5s;
+  animation-duration: 0.5s, 5.5s;
+}
+.top-wrap .main-wrap .card-wrap.card-row-2,
+.top-wrap .main-wrap .card-wrap.card-row-3 {
+  margin-top: 142px;
+}
 .bottom-wrap {
   height: 346px;
   width: 100%;
+  min-width: 1200px;
   margin-top: -7px;
   background-color: #000;
 }
@@ -343,7 +453,7 @@ html {
   height: 64px;
 }
 .nav-parent {
-  justify-content: center;
+  justify-content: flex-end;
 }
 .nav-parent ul li {
   float: left;
@@ -364,6 +474,66 @@ html {
 }
 .hide {
   display: none;
+}
+.list-1 .content-title {
+  font-size: 30px;
+  line-height: 42px;
+  height: 42px;
+  text-align: center;
+  margin: 39px 0 49px;
+}
+.list-1 .content-title-long {
+  font-size: 24px;
+  margin: 24px 22px 37px;
+}
+.list-1 .flex-row-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.list-1 .flex-row-wrap .item-border {
+  border: 2px solid #50e3c2;
+}
+.list-1 .flex-row-wrap .item {
+  width: 179px;
+  height: 429px;
+  text-align: center;
+}
+.list-1 .flex-row-wrap .item > p {
+  margin-top: 19px;
+  font-size: 36px;
+  color: #50e3c2;
+  line-height: 50px;
+}
+.list-1 .flex-row-wrap .item > div {
+  margin: 107px auto 0px;
+  height: 99px;
+  width: 144px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-1 .flex-row-wrap .item > div p {
+  font-size: 24px;
+}
+.list-1 .flex-row-wrap .bg-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 422px;
+}
+.list-1 .flex-row-wrap .bg-item:nth-child(1) {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/06/e312f072-b61d-4754-8aac-4e24d36d11e2.png);
+}
+.list-1 .flex-row-wrap .bg-item:nth-child(2) {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/06/fcc56b68-401e-4740-8daf-380215ffc254.png);
+}
+.list-1 .flex-row-wrap .bg-item:nth-child(3) {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/06/6dc66bd7-a333-47cc-9d42-3b3630bfe04b.png);
+}
+.list-1 .flex-row-wrap .bg-item:nth-child(4) {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/06/7e5d6afb-5c3c-4761-8571-82a6be690538.png);
 }
 .card-details {
   margin-top: 50px;
@@ -421,8 +591,45 @@ html {
   font-family: ;
   width: 860px;
   height: 598px;
+  border: 1px solid #fff;
   background-color: #ffffff;
   overflow: hidden;
+}
+.card-details .right-details .contact-us {
+  padding: 20px 25px 26px;
+  width: 820px;
+  height: 558px;
+}
+.card-details .right-details .contact-us .address-top {
+  display: flex;
+}
+.card-details .right-details .contact-us .address-top .address-msg {
+  flex-basis: 463px;
+}
+.card-details .right-details .contact-us .address-top .address-msg p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 32px;
+}
+.card-details .right-details .contact-us .address-top .address-qrcode {
+  flex: 1;
+  text-align: right;
+}
+.card-details .right-details .contact-us .address-top .address-qrcode img {
+  width: 99px;
+  height: 99px;
+}
+.card-details .right-details .contact-us .address-top .address-qrcode p {
+  height: 25px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #999999;
+  line-height: 25px;
+}
+.card-details .right-details .contact-us .address-bottom {
+  margin-top: 20px;
+  height: 393px;
 }
 .card-details .right-details .teamwork {
   text-align: center;
@@ -438,21 +645,35 @@ html {
 }
 .card-details .right-details .teamwork .bank-icon-wrap {
   width: 570px;
-  height: 350px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   flex-wrap: wrap;
 }
 .card-details .right-details .teamwork .bank-icon-wrap div {
-  margin: 0 12px;
+  margin: 0 12px 28px;
   width: 70px;
   height: 70px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+.card-details .right-details .teamwork .merchant-icon-wrap {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-details .right-details .teamwork .merchant-icon-wrap div {
+  margin: 0 12px 19px;
+  width: 130px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .card-details .right-details .flex-note-parent {
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -477,6 +698,22 @@ html {
   font-weight: 400;
   vertical-align: text-bottom;
 }
+.card-details .right-details .flex-note-parent .about-item {
+  margin: 23px 0;
+  display: flex;
+}
+.card-details .right-details .flex-note-parent .about-item div:nth-child(1) {
+  margin: 13px 42px;
+}
+.card-details .right-details .flex-note-parent .about-item div:nth-child(2) {
+  font-size: 24px;
+  font-weight: 300;
+  color: #333333;
+  line-height: 32px;
+  text-align: left;
+  flex: 1;
+  margin-right: 30px;
+}
 .card-details .right-details .dc-wrap {
   display: flex;
   flex-direction: row;
@@ -485,7 +722,7 @@ html {
   flex-wrap: wrap;
 }
 .card-details .right-details .dc-wrap .dc-item {
-  margin: 20px 12px 10px 12px;
+  margin: 20px 6px 10px 6px;
 }
 .card-details .right-details .dc-wrap .dc-item p {
   color: #333333;
@@ -495,7 +732,7 @@ html {
   text-align: center;
 }
 .card-details .right-details .dc-wrap .dc-item div {
-  width: 187px;
+  width: 200px;
   height: 200px;
   background-size: contain;
   background-position: center;
@@ -525,6 +762,93 @@ html {
 .card-details .right-details .dc-wrap .dc-item .dc-card-2-4 {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/5c8647f3-f0c2-4309-be5e-904b7772b08e.png);
 }
+.card-details .right-details .dc-wrap .dc-item .dc-card-car-1-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/87f6ddc9-3041-42ba-b280-edcc6e624201.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-car-1-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/6f541fab-6fe0-4d22-b4c3-84e40227c2f4.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-car-1-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/c031b960-29cd-40b4-a489-fbd419f2b8ed.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-1-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/51ca334b-5fed-46f2-b2d0-3110dbd62219.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-1-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/5525c214-d084-47e2-bee3-7ec14cf21856.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-1-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/91459e5a-da02-438d-b4b3-2e7d4cec8879.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-1-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/bd4ff42e-9247-40ba-bbee-4dcc4a4432da.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-2-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/c34532db-59fc-44ea-b3bd-da8bb750cd02.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-2-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f040fbd3-a822-4343-b5ec-b8d6a73ad136.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-2-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/4b587577-7910-4d5d-8ef7-8e1c081de8db.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-luxury-2-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/c3ccf17b-fb52-4165-8de6-a3145b5c299e.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-1-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/45c61e98-f6f0-4526-b9f4-c295eba82fe0.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-1-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f5489470-6732-4c5f-8d32-c1f84671743c.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-1-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/dbd91644-9fb8-44d3-9634-0f3f0edbf8c0.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-1-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/03b2f8ff-a438-4667-819c-b45140fd2bcb.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-2-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/a440b1ac-cdda-4eda-b4a8-a55eca403f0b.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-2-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/e2587a8d-7ea0-477b-bfa2-c69c157c6590.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-2-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/00799bc0-2518-480d-9bf7-3fa6adeb72c8.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-foods-2-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/b34ff4a1-cba9-47c3-8c19-d2b39f613aa2.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-1-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/040c4a1a-aa32-4621-a2be-352c4c70d52e.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-1-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/6d8e829b-0fbb-486a-b77c-6422845721c2.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-1-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/b62deb60-9757-41c0-8320-f765735b5ebf.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-1-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f6a5433b-e214-4676-9d7a-b2b7c1b6c38e.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-2-1 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/666cdfc1-7aaf-4e2d-a0f1-f3a096b94dd1.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-2-2 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f623af3c-6422-47a5-b022-5e0eb52fab06.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-2-3 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/6081cca3-311b-48d0-bb0e-3f3352d4136c.png);
+}
+.card-details .right-details .dc-wrap .dc-item .dc-card-life-2-4 {
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/f4d78b1a-b617-406d-9a29-02b819ded8ab.png);
+}
+.card-details .left-width-1 {
+  width: 287px;
+}
+.card-details .right-width-1 {
+  width: 913px;
+}
 .card-1-1 {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f909d08a-0555-44ef-9af3-86784266c1eb.png);
 }
@@ -535,7 +859,7 @@ html {
   background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/01dc33eb-d55a-4c96-b80a-a302dd7cdec7.png);
 }
 .QR-code-1-1 {
-  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/04/f1faf1aa-d7cb-47db-8a51-5feb6c444d74.png);
+  background-image: url(https://sr-img.oss-cn-beijing.aliyuncs.com/OSS/2018/12/05/34068e2d-a809-4f59-a526-193304e7fb3f.png);
 }
 .animation-card {
   -webkit-transition: box-shadow 0.7s, opacity 0.7s;
@@ -610,4 +934,52 @@ html {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }
+}
+.little-star {
+  margin: 60px 0;
+  position: relative;
+  display: block;
+  color: #50e3c2;
+  width: 0px;
+  height: 0px;
+  border-right: 20px solid transparent;
+  border-bottom: 14px solid #50e3c2;
+  border-left: 20px solid transparent;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+}
+.little-star:before {
+  border-right: 7px solid transparent;
+  border-bottom: 17px solid #50e3c2;
+  border-left: 7px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -10px;
+  left: -16px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+}
+.little-star:after {
+  position: absolute;
+  display: block;
+  color: #50e3c2;
+  top: 3px;
+  left: -24px;
+  width: 0px;
+  height: 0px;
+  border-right: 20px solid transparent;
+  border-bottom: 14px solid #50e3c2;
+  border-left: 20px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  content: '';
 }
